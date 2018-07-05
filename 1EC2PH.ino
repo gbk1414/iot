@@ -22,6 +22,9 @@ void setup() {
   Serial.begin(9600); //setup communication to display
   Vernier.autoID(); //identify the sensor being used
 
+  pinMode(12, OUTPUT); //12번 핀을 양액주입용 솔레노이드 밸브 제어장치로 지정함
+  pinMode(13, OUTPUT); //13번 핀을 질산주입용 솔레노이드 밸브 제어장치로 지정함
+  
   timer.setInterval(21600000, valancer);
 }
  
